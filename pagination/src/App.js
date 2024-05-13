@@ -31,8 +31,9 @@ function App() {
       setUser(response.data);
       } catch (err) {
         console.log(err);
+        alert("Failed to fetch data")
       }
-      console.log("User=>",user)
+     // console.log("User=>",user)
     };
     fetchData();
   }, []);
@@ -98,7 +99,7 @@ function App() {
         </nav> */}
 
         <nav>
-          <button onClick={prePage}>Prev</button>
+          <button onClick={prePage}>Previous</button>
           <button>{currentPage}</button>
           <button onClick={nextPage}>Next</button>
         </nav>
